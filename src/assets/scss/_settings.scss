@@ -15,8 +15,12 @@
 
 // 1. Global
 // ---------
+$accent-color: #0088aa;
+$background-color: #fcfcfc;
+$font-color: #546b81;
+$body-border: 1px solid #edeff1;
 
-$primary-color: #2199e8;
+$primary-color: $accent-color;
 $secondary-color: #777777;
 $success-color: #3adb76;
 $warning-color: #ffae00;
@@ -54,8 +58,8 @@ $block-grid-gutter: $global-gutter;
 // 4. Typography
 // -------------
 
-$global-font-color: $black;
-$body-font-family: Helvetica, Arial, sans-serif;
+$global-font-color: $font-color;
+$body-font-family: Colfax,Helvetica,Arial,sans-serif;
 $global-font-weight: normal;
 $header-color: inherit;
 $global-line-height: 1.3;

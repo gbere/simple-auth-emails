@@ -5,11 +5,11 @@
 body,
 html, 
 .body {
-  background: #f3f3f3 !important;
+  background: $background-color !important;
 }
 
 .container.header {
-  background: #f3f3f3;
+  background: $background-color;
 }
 
 .body-drip {
@@ -55,5 +55,11 @@ table.button.google table td {
 }
 
 .wrapper.secondary {
-  background: #f3f3f3;
+  background: $background-color;
+}
+
+// Simple Auth Template
+.body-auth {
+  border: $body-border;
+  border-top: 8px solid $accent-color;
 }

@@ -1,0 +1,33 @@
+---
+subject: Simple Auth Template
+---
+
+<spacer size="32"></spacer>
+
+<container class="body-auth">
+
+  <spacer size="16"></spacer>
+
+  <center>
+    <img src="http://placehold.it/120/663399" alt="Logo">
+  </center>
+
+  <spacer size="16"></spacer>
+
+  <row>
+    <columns>
+      <h4 class="text-center">\{{ email.subject }}</h4>
+    </columns>
+  </row>
+
+  <row>
+    <columns>
+      <p class="text-center">\{{ email.content }}</p>
+      <spacer size="8"></spacer>
+      <center>
+        <button href="\{{ action_url }}" class="primary">\{{ action_text }}</button>
+      </center>
+    </columns>
+  </row>
+
+</container>
