@@ -1,5 +1,5 @@
 ---
-subject: Simple Auth Template
+subject: "{{ email.subject }}"
 ---
 
 <spacer size="32"></spacer>
@@ -22,11 +22,19 @@ subject: Simple Auth Template
 
   <row>
     <columns>
-      <p class="text-center">\{{ email.content }}</p>
+      {% block content %}
+        <p class="text-center">
+          \{{ email.content|nl2br }}
+        </p>
+      {% endblock %}
       <spacer size="8"></spacer>
-      <center>
-        <button href="\{{ action_url }}" class="primary">\{{ action_text }}</button>
-      </center>
+      {% block action %}
+        {% if action_url %}
+          <center>
+            <button href="\{{ action_url }}" class="primary">\{{ action_text }}</button>
+          </center>
+        {% endif %}
+      {% endblock %}
     </columns>
   </row>
 
