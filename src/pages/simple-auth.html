@@ -6,13 +6,15 @@ subject: "{{ email.subject }}"
 
 <container class="body-auth">
 
-  <spacer size="16"></spacer>
+  {% if not simple_auth_logo is null %}
+  <spacer size="64"></spacer>
 
   <center>
-    <img src="http://placehold.it/120/663399" alt="Logo">
+    <img src="assets/img/logo.svg" alt="Logo">
   </center>
+  {% endif %}
 
-  <spacer size="16"></spacer>
+  <spacer size="32"></spacer>
 
   <row>
     <columns>
@@ -24,15 +26,16 @@ subject: "{{ email.subject }}"
     <columns>
       {% block content %}
         <p class="text-center">
-          \{{ email.content|nl2br }}
+          \{{ content|nl2br }}
         </p>
       {% endblock %}
-      <spacer size="8"></spacer>
+      <spacer size="16"></spacer>
       {% block action %}
-        {% if action_url %}
+        {% if action_url is defined %}
           <center>
             <button href="\{{ action_url }}" class="primary">\{{ action_text }}</button>
           </center>
+          <spacer size="16"></spacer>
         {% endif %}
       {% endblock %}
     </columns>
